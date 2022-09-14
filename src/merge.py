@@ -1,5 +1,4 @@
 """Code for merging two sorted lists."""
-import pytest
 
 def merge(x: list[int], y: list[int]) -> list[int]:
     """
@@ -15,13 +14,13 @@ def merge(x: list[int], y: list[int]) -> list[int]:
     z = []  # a new list to copy elements into
     # FIXME: fill out the loop so you merge the lists
     # until one of them is empty
-    while i < len(x) or j < len(y):
+    while i < len(x) and j < len(y):
         if x[i] <= y[j]:
             z.append(x[i]) 
-            if i < len(x): i += 1
-        else: 
+            i += 1
+        if y[j] < x[i]: 
             z.append(y[j])
-            if j < len(y): j += 1
+            j += 1
         if len(z) == (len(x) + len(y)):
             pass
     # FIXME: you shouldn't just break here
