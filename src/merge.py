@@ -1,5 +1,5 @@
 """Code for merging two sorted lists."""
-
+import pytest
 
 def merge(x: list[int], y: list[int]) -> list[int]:
     """
@@ -27,4 +27,3 @@ def merge(x: list[int], y: list[int]) -> list[int]:
     # remainder of the other into z.
     return z
 merge([1, 2, 4, 6], [1, 3, 4, 5])
-[1, 1, 2, 3, 4, 4, 5, 6]
